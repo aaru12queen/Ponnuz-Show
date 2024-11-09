@@ -1,0 +1,219 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+header {
+    background: linear-gradient(45deg, #ff6347, #ffd700); /* Tomato to Gold */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header h1 {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #32cd32; /* LimeGreen */
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6347; /* Tomato */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Verdana', sans-serif;
+}
+nav a:hover {
+    background: #ffd700; /* Gold */
+    color: white;
+    border-radius: 4px;
+}
+.hero {
+    position: relative;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+.hero-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    color: #333; /* Text color */
+}
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.container {
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #ff6347; /* Tomato */
+}
+.container p {
+    line-height: 1.6;
+}
+.card {
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: calc(33% - 40px);
+    vertical-align: top;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background-color: #ff6347; /* Tomato */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6347; /* Tomato */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+.back-to-top:hover {
+    background-color: #ffd700; /* Gold */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    animation: slideIn 0.1s ease;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes slideIn {
+    from {opacity: 0; transform: translateY(-100%);}
+    to {opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 5px 0;
+    }
+    .container {
+        padding: 20px;
+    }
+    .card {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery img {
+    margin: 10px;
+    width: calc(33% - 20px);
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+ .testimonial {
+    background-color: #f0f0f0;
+    border-left: 5px solid #ff6347; /* Tomato */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.testimonial:hover {
+    background-color: #ffd700; /* Gold */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.testimonial h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #32cd32; /* LimeGreen */
+}
+
